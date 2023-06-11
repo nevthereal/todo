@@ -5,4 +5,3 @@ In this app I used Firebase for the first time. I followed a YouTube tutorial by
 - Vite
 - Firebase
 - Tailwind CSS
-- dotenv
