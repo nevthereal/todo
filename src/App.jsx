@@ -24,10 +24,6 @@ function App() {
   // Create todo
   const createTodo = async (e) => {
     e.preventDefault(e)
-    if(input === '') {
-      alert('Type something :)')
-      return 
-    }
     await addDoc(collection(db, 'todos'), {
       text: input,
       completed: false,
@@ -69,7 +65,7 @@ function App() {
         <div className={style.container}>
           <h3 className={style.heading}>Todo</h3>
           <form onSubmit={createTodo} className={style.form}>
-            <input value={input} onChange={(e) => setInput(e.target.value)} className={style.input} type="text" placeholder='Add Todo' />
+            <input required value={input} onChange={(e) => setInput(e.target.value)} className={style.input} type="text" placeholder='Add Todo' />
             <button className={style.button}><FontAwesomeIcon icon={faPlus} /></button>
           </form>
           <ul>
